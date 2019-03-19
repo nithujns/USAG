@@ -1,0 +1,292 @@
+﻿@model USAG_Appl.Models.Merchant
+
+<link href="~/Content/Site.css" rel="stylesheet" />
+<div id="main">
+
+    <div class="topnav">
+
+        <span style="font-size:30px;cursor:pointer; color:white" onclick="manageToggleMenu()" id="toggleMenu" title="Open">&#9776; </span>
+        <a href="#">Nithya Jones Caesar</a>
+        <a href="#">Logout</a>
+        <a href="#"><i class="fa fa-cogs" style="color:white;"></i></a>
+    </div>
+
+    <div class="w3-container" id="Body_Container">
+        <div class="panel panel-default panel-search" style="margin-top:-16px !important; border:0 !important; border-radius:0!important;">
+            <div class="panel-body">
+                <div class="content">
+                    <div class="form-horizontal">
+
+                        <div id="user-edit" class="nav-tabs-custom">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a data-tab-name="tab-info" data-toggle="tab" href="#tab-info">Merchant Profile</a></li>
+                                <li class=""><a data-tab-name="tab-activitylog" data-toggle="tab" href="#tab-activitylog">Owner/Officer Information</a></li>.
+                                <li class=""><a data-tab-name="tab-activitylog" data-toggle="tab" href="#tab-activitylog">References</a></li>
+                                <li class=""><a data-tab-name="tab-activitylog" data-toggle="tab" href="#tab-activitylog">Warranty Of Application and Investigative Authorization</a></li>
+                            </ul>
+                            <div id="rcorners2">
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="tab-info">
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+
+
+                                                    <div class="form-group">
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_ContactNameThisAddress" title="">Merchant Legal Name</label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_ContactNameThisAddress" name="" type="text" value="" placeholder="Merchant Legal Name(Must Match Social Security or federal tax ID records)">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Location_Name" title="">Location Name(DBA)</label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Location_Name" name="" type="text" value="" placeholder="Location Name">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Location_Name" title="">No. of Locations</label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Location_Number" name="" type="text" value="" placeholder="No. of Location">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="form-group">
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_LegalAddress" title="">Merchant Legal Address</label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_LegalAddress" name="" type="text" value="" placeholder="Merchant Legal Address">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_ContactNameThisAddress" title="">Location Street Address</label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_ContactNameThisAddress" name="" type="text" value="" placeholder="Location Street Address(No PO Box)">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Phone" title="">Corporate Phone </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Phone" name="" type="text" value="" placeholder="Corporate Phone()">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Fax" title="">Fax </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Fax" name="" type="text" value="" placeholder="Corporate Fax">
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="DBA_Phone" title="">DBA Phone() </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="DBA_Phone" name="" type="text" value="" placeholder="DBA Phone()">
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="DBA_Fax" title="">Fax </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="DBA_Fax" name="" type="text" value="" placeholder="DBA Fax">
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_contactnamethisaddress" title="">Contact Name this Address<br />(Merchant) </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_contactnamethisaddress" name="" type="text" value="" placeholder="Contact Name this Address">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="DBA_contactnamethisaddress" title="">Contact Name this Address<br />(DBA) </label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="DBA_contactnamethisaddress" name="" type="text" value="" placeholder="Contact Name this Address(DBA)">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Email" title="">Email</label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Email" name="" type="text" value="" placeholder="Email">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Website" title="">Merchant Website</label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Website" name="" type="text" value="" placeholder="www.sample.com">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <hr />
+                                                    <div class="form-group">
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Legalnameasintaxreturn" title="">Legal Name as it appears<br /> on Merchant's tax return</label></div>
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Legalnameasintaxreturn" name="" type="text" value="" placeholder="Legal name">
+                                                            </div>
+                                                            <span style=" font-size:12px;"><i>NOTE:Failure to provide accurate information may result in a withholding of merchant funding per IRS regulations</i></span>
+
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Website" title="">Federal Tax ID</label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Website" name="" type="text" value="" placeholder="Federal tax ID">
+                                                            </div>
+
+                                                        </div>
+
+
+
+                                                        <input id="Merchant_Legalnameasintaxreturn" name="" type="checkbox" value=""> <span>I certify that I am a foreign entity/non resident alien.</span>
+                                                        <span style=" font-size:12px;"><i>If checked please attach IRS form W-8</i></span>
+
+                                                    </div>
+                                                    <hr />
+                                                    <div class="form-group">
+                                                        <div class="col-sm-4">
+                                                            <div class="label-wrapper">
+                                                                <label class="control-label" for="Ownership_types" title="">Ownership Type:</label>
+
+                                                                <input id="Ownership_SoleProprietor" name="" type="checkbox" value=""> <span>Sole Proprietor</span>
+                                                                <input id="Ownership_Corporation" name="" type="checkbox" value=""> <span>Corporation</span>
+                                                                <input id="Ownership_Partnership" name="" type="checkbox" value=""> <span>Partnership</span>
+                                                                <input id="Ownership_LLC" name="" type="checkbox" value=""> <span>LLC</span>
+                                                                <input id="Ownership_TaxExcempt" name="" type="checkbox" value=""> <span>Tax-Excempt(501c)</span>
+                                                                <input id="Ownership_Government" name="" type="checkbox" value=""> <span>Government</span>
+                                                                <input id="Ownership_ProfessionalAssn" name="" type="checkbox" value=""> <span>Professional Assn</span>
+                                                                <input id="Other" name="" type="checkbox" value=""> <span>Other</span>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div class="col-sm-1">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Website" title="">Date Business Established </label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Website" name="" type="date" value="" placeholder="Date">
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-sm-1">
+                                                            <div class="label-wrapper"><label class="control-label" for="Merchant_Website" title="">Current Ownership(Yrs) </label></div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <div class="input-group">
+                                                                <input class="form-control text-box single-line password valid" id="Merchant_Website" name="" type="Number" value="" placeholder="Ownership Years">
+                                                            </div>
+
+                                                        </div>
+
+
+
+
+                                                        @*<div class="col-sm-2">
+                                                                <input  id="Merchant_Legalnameasintaxreturn" name="" type="checkbox" value=""> <span>I certify that I am a foreign entity/non resident alien.</span>
+                                                            </div>*@
+
+                                                        @*<div class="form-group">
+                                                            <div class="col-sm-12">
+                                                                    <input class="form-control text-box single-line password valid" id="Merchant_Legalnameasintaxreturn" name="" type="checkbox" value="" > <span>I certify that I am a foreign entity/non resident alien.</span>
+                                                                </div>
+                                                            </div>*@
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            @*<div class="form-group">
+                                                    <div class="col-sm-3">
+                                                        <div class="label-wrapper"><label class="control-label" for="RoleId" title="">Select Role</label></div>
+                                                    </div>
+                                                    <div class="col-sm-9">
+                                                        <div class="input-group input-group-required">
+                                                            <select class="form-control" data-val="true" data-val-number="The field Select Role must be a number." data-val-required="'Role Id' must not be empty." id="ddlRole" name="RoleId">
+                                                                <option value="0">-Select-</option>
+                                                                <option selected="selected" value="1">Administrators</option>
+                                                                <option value="13">ISO</option>
+                                                                <option value="9">Merchant Base Admin</option>
+                                                                <option value="8">Merchant Full Admin</option>
+                                                                <option value="11">Sub Merchant Base Admin</option>
+                                                                <option value="10">Sub Merchant Full Admin</option>
+                                                                <option value="7">USAG Base Admin</option>
+                                                                <option value="6">USAG Full Admin</option>
+                                                            </select>
+                                                            <div class="input-group-btn">
+                                                                <span class="required">*</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="field-validation-valid" data-valmsg-for="RoleId" data-valmsg-replace="true"></span>
+                                                        <input data-val="true" data-val-number="The field RoleLevelId must be a number." data-val-required="'Role Level Id' must not be empty." id="hfRoleLevel" name="RoleLevelId" type="hidden" value="1">
+                                                    </div>
+                                                </div>*@
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+    </div>
+

@@ -1,0 +1,395 @@
+﻿body {
+    font-family: sans-serif;
+    background-color: #ECF0F5;
+    font-family: Arial;
+}
+.clear {
+    clear: both;
+}
+
+.Title {
+    color: #222D31;
+    font: Normal 20px Sans-Serif;
+    padding: 75px 0;
+    margin-top: -162px;
+}
+.content {
+    min-height: 250px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.panel-group .panel {
+    margin-bottom: 0;
+    border-radius: 4px;
+}
+.panel-default {
+    border-color: #ddd;
+}
+
+.side-menu li {
+    list-style: none;
+}
+.nav-tabs-custom > .nav-tabs > li.active {
+    border-top-color: #3c8dbc!important;
+}
+
+.small-icons {
+    height: 15px;
+    width: 15px;
+    color: #ffffff;
+}
+
+.side-menu li a {
+    font-family: serif;
+    text-decoration: none;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #222D31;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 15px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+.nav-menu {
+    float: right;
+    list-style: none;
+    display: inline;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 15px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    /*padding: 16px;*/
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #3C8DBC;
+    margin-top: -22px;
+    height:89px;
+}
+img {
+    vertical-align: middle;
+    height: 40px;
+    margin: 15px 0 0 51px;
+}
+    .topnav a {
+        float: right;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+#myInput {
+   
+    background-image: url('Images/search_icon.png');
+    background-position: 2px 12px;
+    background-repeat: no-repeat;
+    width: 125px;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+#rcorners2 {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: 2px solid #D2D1D1;
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 22px 12px;
+    /*margin: 12px 8px;*/
+    /*margin:12px 0 0 -150px;*/
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.panel {
+    margin-top: -16px !important;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.skin-blue .sidebar-form {
+    border-radius: 3px;
+       }
+.skin-blue .sidebar-form {
+    border-radius: 3px;
+    border: 1px solid #374850;
+    margin: 10px 10px;
+}
+.sidebar-form, .sidebar-menu > li.header {
+    overflow: hidden;
+    text-overflow: clip;
+}
+
+
+/*Next/ Previous*/
+
+/*@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lime;
+    }
+}*/
+
+
+/*Media Queries form Ipad*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    #rcorners2 {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 2px solid #D2D1D1;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .label-wrapper {
+        padding: 0;
+    }
+
+    .panel-group .panel {
+        margin-bottom: auto;
+    }
+    .panel-body {
+        padding: 15px;
+        /*display: inline-block;*/
+    }
+    .form-group {
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        display: block;
+    }
+    .container-fluid {
+        /*padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;*/
+        width: 100%;
+       
+    }
+    
+}
+
+
+/*Ipad-pro*/
+@media only screen and (min-device-width : 1000px) and (max-device-width : 1300px) {
+    #rcorners2 {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 2px solid #D2D1D1;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .label-wrapper {
+        padding: 0;
+    }
+
+    .panel-group .panel {
+        margin-bottom: auto;
+    }
+
+    .panel-body {
+        padding: 15px;
+        /*display: inline-block;*/
+    }
+
+    .form-group {
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        display: block;
+    }
+
+    .container-fluid {
+        /*padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;*/
+        width: 100%;
+    }
+}
+
+/*Ipad*/
+@media only screen and (min-device-width : 700px) and (max-device-width : 1000px) {
+    #rcorners2 {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 2px solid #D2D1D1;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .label-wrapper {
+        padding: 0;
+    }
+
+    .panel-group .panel {
+        margin-bottom: auto;
+    }
+
+    .panel-body {
+        padding: 15px;
+        /*display: inline-block;*/
+    }
+
+    .form-group {
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        display: block;
+    }
+
+    .container-fluid {
+        /*padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;*/
+        width: 100%;
+    }
+
+   .form-horizontal{
+       display:inline;
+       width:100%;
+   }
+}
+@media only screen and (min-device-width : 1000px) and (max-device-width : 700px) {
+    #rcorners2 {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border: 2px solid #D2D1D1;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        display: inline-block;
+    }
+
+    .label-wrapper {
+        padding: 0;
+    }
+
+    .panel-group .panel {
+        margin-bottom: auto;
+    }
+
+    .panel-body {
+        padding: 15px;
+        /*display: inline-block;*/
+    }
+
+    .form-group {
+        /*margin-bottom: 15px;*/
+        width: 100%;
+        display: block;
+    }
+
+    .container-fluid {
+        /*padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;*/
+        width: 100%;
+    }
+
+    .col-md-2 {
+       
+        display: block;
+    }
+}
+
+
+
+    @media only screen and (min-width: 700px) {
+        /*.input-group {
+            display: inline-block;
+            width: 6em;
+            position: relative;
+            top: -3em;
+        }
+
+        .label-wrapper {
+            display: inline-block;
+            width: 6em;
+            margin-right: .5em;
+            padding-top: 1.5em;
+        }*/
+        
+    }

@@ -1,0 +1,38 @@
+﻿@*This page has the layout of the form values
+    The Next & Previous buttons work*@
+
+
+@model USAG_Appl.Models.Merchant
+
+<h4>Title</h4>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>MeasureA</th>
+            <th>MeasureB</th>
+        </tr>
+        
+            <tr>
+                <td>
+                    @Html.RadioButton(item.id, Model.Pin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.measureA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.measureB)
+                </td>
+            </tr>
+       
+    </table>
+
+    <input type="submit" value="Save" class="" />
+}

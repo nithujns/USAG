@@ -1,0 +1,194 @@
+﻿@model USAG_Appl.Models.Merchant
+@*<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>*@
+
+
+<form action="" method="post" class="form-horizontal" role="form" id="Test1_Form">
+    <p class="Title">Setup</p>
+
+    <div class="form-group">
+
+        <div class="col-sm-1">
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.CustomerNumber, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-1">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.CustomerNumber, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "CustomerNumber", Value = "", placeholder = "" })
+            </div><br />
+        </div>
+
+        <div class="col-sm-1">
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.dbaName, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.dbaName, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "dbaName", Value = "", placeholder = "" })
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+
+        @*<nav class="navbar navbar-light bg-light">
+                <span class="navbar-title">Non Taxable Items</span>
+            </nav>
+            <div class="col-sm-1">
+                <div class="label-wrapper">@Html.LabelFor(Model => Model.ApplicationFee, new { @class = "control-label" })</div>
+            </div>
+            <div class="col-sm-4">
+                <div class="input-group">
+                    @Html.TextBoxFor(Model => Model.ApplicationFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "ApplicationFee", Value = "", placeholder = "" })
+                </div>
+            </div>*@
+        <table class="table table-bordered ">
+
+            <thead>
+                <tr>
+                    <th class="col-sm-8">Non Taxable Item</th>
+                    <th class="col-sm-1">Quantity</th>
+                    <th class="col-sm-1">Unit Price</th>
+                    <th class="col-sm-1 ">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.ApplicationFee, new { @class = "control-label" })  </td>
+                    <td> @Html.TextBoxFor(Model => Model.QtyApplicationFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "QtyApplicationFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.UPApplicationFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPApplicationFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.AmtApplicationFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtApplicationFee", Value = "", placeholder = "$" })</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.EncryptionFee, new { @class = "control-label" })  </td>
+                    <td> @Html.TextBoxFor(Model => Model.QtyEncryptionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "QtyEncryptionFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.UPEncryptionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPEncryptionFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.AmtEncryptionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtEncryptionFee", Value = "", placeholder = "$" })</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.WirelessActivationFee, new { @class = "control-label" })  </td>
+                    <td> @Html.TextBoxFor(Model => Model.QtyWirelessActivaionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "QtyWirelessActivaionFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.UPWirelessActivaionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPEncryptionFee", Value = "", placeholder = "" })</td>
+                    <td> @Html.TextBoxFor(Model => Model.AmtWirelessActivaionFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtEncryptionFee", Value = "", placeholder = "$" })</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr />
+        <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th class="col-sm-6">Taxable Item</th>
+                    <th class="col-sm-1">Purchase</th>
+                    <th class="col-sm-1">Rent</th>
+                    <th class="col-sm-1 ">Repro/Own</th>
+                    <th class="col-sm-1 ">Quantity</th>
+                    <th class="col-sm-1 ">Unit-Price</th>
+                    <th class="col-sm-1 ">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.Z11Terminal, new { @class = "control-label" })  </td>
+                    <td>@Html.RadioButtonFor(Model => Model.PurchaseZ11Terminal, "PurchaseZ11Terminal", new { id = "PurchaseZ11Terminal", Name = "choose-one", Value = "PurchaseZ11Terminal", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.RentZ11Terminal, "RentZ11Terminal", new { id = "RentZ11Terminal", Name = "choose-one", Value = "RentZ11Terminal", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.reproOwnZ11Terminal, "reproOwnZ11Terminal", new { id = "reproOwnZ11Terminal", Name = "choose-one", Value = "reproOwnZ11Terminal", @class = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.QtyZ11Terminal, new { @class = "form-control text-box single-line password valid", Type = "Number", id = "QtyZ11Terminal", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.UPZ11Terminal, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPZ11Terminal", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.AmtZ11Terminal, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtZ11Terminal", Value = "", placeholder = "$" })</td>
+                </tr>
+
+
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.Z9Terminal, new { @class = "control-label" })  </td>
+                    <td>@Html.RadioButtonFor(Model => Model.PurchaseZ9Terminal, "PurchaseZ9Terminal", new { id = "PurchaseZ9Terminal", Name = "choose-one", Value = "PurchaseZ9Terminal", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.RentZ9Terminal, "RentZ9Terminal", new { id = "RentZ9Terminal", Name = "choose-one", Value = "RentZ9Terminal", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.reproOwnZ9Terminal, "reproOwnZ9Terminal", new { id = "reproOwnZ9Terminal", Name = "choose-one", Value = "reproOwnZ9Terminal", @class = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.QtyZ9Terminal, new { @class = "form-control text-box single-line password valid", Type = "Number", id = "QtyZ9Terminal", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.UPZ9Terminal, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPZ9Terminal", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.AmtZ9Terminal, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtZ9Terminal", Value = "", placeholder = "$" })</td>
+                </tr>
+
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.Z6Pinpad, new { @class = "control-label" })  </td>
+                    <td>@Html.RadioButtonFor(Model => Model.PurchaseZ6Pinpad, "PurchaseZ6Pinpad", new { id = "PurchaseZ6Pinpad", Name = "choose-one", Value = "PurchaseZ6Pinpad", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.RentZ6Pinpad, "RentZ6Pinpad", new { id = "RentZ6Pinpad", Name = "choose-one", Value = "RentZ6Pinpad", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.reproOwnZ6Pinpad, "reproOwnZ6Pinpad", new { id = "reproOwnZ6Pinpad", Name = "choose-one", Value = "reproOwnZ6Pinpad", @class = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.QtyZ6Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Number", id = "QtyZ6Pinpad", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.UPZ6Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPZ6Pinpad", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.AmtZ6Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtZ6Pinpad", Value = "", placeholder = "$" })</td>
+                </tr>
+
+
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.Z3Pinpad, new { @class = "control-label" })  </td>
+                    <td>@Html.RadioButtonFor(Model => Model.PurchaseZ3Pinpad, "PurchaseZ3Pinpad", new { id = "PurchaseZ3Pinpad", Name = "choose-one", Value = "PurchaseZ3Pinpad", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.RentZ3Pinpad, "RentZ3Pinpad", new { id = "RentZ3Pinpad", Name = "choose-one", Value = "RentZ3Pinpad", @class = "" })</td>
+                    <td>@Html.RadioButtonFor(Model => Model.reproOwnZ3Pinpad, "reproOwnZ3Pinpad", new { id = "reproOwnZ3Pinpad", Name = "choose-one", Value = "reproOwnZ3Pinpad", @class = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.QtyZ3Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Number", id = "QtyZ3Pinpad", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.UPZ3Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "UPZ3Pinpad", Value = "", placeholder = "" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.AmtZ3Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtZ3Pinpad", Value = "", placeholder = "$" })</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>@Html.LabelFor(Model => Model.Tax, new { @class = "control-label" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.Tax, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "Tax", Value = "", placeholder = "%" })</td>
+                    <td>@Html.TextBoxFor(Model => Model.AmtZ3Pinpad, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AmtZ3Pinpad", Value = "", placeholder = "$" })</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>@Html.LabelFor(Model => Model.SubTotalTaxableItems, new { @class = "control-label" })</td>
+                    <td></td>
+                    <td>@Html.TextBoxFor(Model => Model.SubTotalTaxableItems, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "SubTotalTaxableItems", Value = "", placeholder = "$" })</td>
+                </tr>
+
+
+            </tbody>
+        </table>
+        <hr />
+        <div class="form-group">
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <div class="label-wrapper" style="float:left">
+                        @Html.LabelFor(Model => Model.WhoisResponsibleForPayment, new { @class = "control-label" })
+                        @Html.RadioButtonFor(Model => Model.MerchantResponsible, "MerchantResponsible", new { id = "MerchantResponsible", Name = "choose-one", Value = "MerchantResponsible", @class = "" }) Merchant &nbsp;&nbsp;&nbsp;&nbsp;
+                        @Html.RadioButtonFor(Model => Model.RepResponsible, "RepResponsible", new { id = "RepResponsible", Name = "choose-one", Value = "RepResponsible", @class = "" }) Rep
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="input-group">
+                    <div class="label-wrapper" style="float:right">
+                        @Html.LabelFor(Model => Model.SelectPaymentType, new { @class = "control-label" })
+                        @Html.RadioButtonFor(Model => Model.PayTypeACH, "PayTypeACH", new { id = "PayTypeACH", Name = "choose-one", Value = "PayTypeACH", @class = "" }) ACH &nbsp; &nbsp; &nbsp; &nbsp;
+                        @Html.RadioButtonFor(Model => Model.PayCreditCard, "PayCreditCard", new { id = "PayCreditCard", Name = "choose-one", Value = "PayCreditCard", @class = "" })Credit Card  &nbsp; &nbsp; &nbsp; &nbsp;
+                        @Html.RadioButtonFor(Model => Model.PayTypeCheck, "PayTypeCheck", new { id = "PayTypeCheck", Name = "choose-one", Value = "PayTypeCheck", @class = "" }) Check
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <ul class="pager">
+        <li>@Html.ActionLink("<", "ApplicationType", "Home") </li>
+        @*<li>@Html.ActionLink(">", "#", "Home")   </li>*@
+
+    </ul>
+    <button type="submit" class="btn btn-primary">submit </button>
+
+</form>
+

@@ -1,0 +1,264 @@
+﻿@model USAG_Appl.Models.Merchant
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Merchant</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Email_ApplcationType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Email_ApplcationType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Pin)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Pin)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.GrossYearlyDebitSalesVolume)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.GrossYearlyDebitSalesVolume)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AverageTicket)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AverageTicket)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.HighestTicketAmount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HighestTicketAmount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PinDebitVolumeDiscount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PinDebitVolumeDiscount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PinDebitTrans)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PinDebitTrans)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AmountofSurcharge)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AmountofSurcharge)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EBTVolumeDiscount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EBTVolumeDiscount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EBTTransFee)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EBTTransFee)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyComplianceFee)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyComplianceFee)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyStatementFee)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyStatementFee)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MonthlyMinimum)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MonthlyMinimum)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ChargeBack)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ChargeBack)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dbaName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dbaName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.legalName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.legalName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.legalAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.legalAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.LocstreetAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.LocstreetAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.corporatePhone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.corporatePhone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.merchantEmail)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.merchantEmail)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.merchantname_taxreturn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.merchantname_taxreturn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.federalTaxID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.federalTaxID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.merchantwebsite)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.merchantwebsite)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.corporateFax)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.corporateFax)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dbaPhone)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dbaPhone)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.dbaFax)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.dbaFax)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.warrantyName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.warrantyName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.warrantyAddress)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.warrantyAddress)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.streetAddress2)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.streetAddress2)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

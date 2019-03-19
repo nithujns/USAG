@@ -1,0 +1,295 @@
+﻿
+@model USAG_Appl.Models.Merchant
+
+
+<form action="" method="post" class="form-horizontal" role="form" id="Test1_Form">
+    <p class="Title">Application Type </p>
+
+    <div class="form-group">
+
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.Email_ApplcationType, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.Email_ApplcationType, new { @class = "form-control text-box single-line password valid", Type = "Email", id = "Email_ApplcationType", Value = "", placeholder = "Email Address" })
+            </div><br />
+        </div>
+        <div class="col-sm-4">
+            @Html.RadioButtonFor(Model => Model.Pin, "Pin", new { id = "Pin", Name = "choose-one", Value = "Pin", @class = "" })Pin Based
+            @Html.RadioButtonFor(Model => Model.Pin, "Pinless", new { id = "Pin", Name = "choose-one", Value = "Pinless", @class = "" })Pinless
+        </div>
+    </div>
+
+
+    <div class="form-group">
+
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-title">Transaction Information</span>
+        </nav>
+        <div class="col-sm-2">
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.GrossYearlyDebitSalesVolume, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.GrossYearlyDebitSalesVolume, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "GrossYearlyDebitSalesVolume", Value = "", placeholder = "$" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.AverageTicket, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.AverageTicket, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "AverageTicket", Value = "", placeholder = "$" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.HighestTicketAmount, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-2">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.HighestTicketAmount, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "HighestTicketAmount", Value = "", placeholder = "$" })
+            </div><br />
+        </div>
+    </div>
+
+
+    <div class="input-group">
+        @*Pin Based option Fields*@
+        <div class="resultDetail Pin required">
+            <div class="form-field">
+                <nav class="navbar navbar-light bg-light">
+                    <span class="navbar-title">Schedule of Fees for Pin Debit</span>
+                </nav>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.PinDebitVolumeDiscount, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.PinDebitVolumeDiscount, new { @class = "form-control text-box single-line password valid", id = "PinDebitVolumeDiscount", Value = "", placeholder = "%" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.PinDebitTrans, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.PinDebitTrans, new { @class = "form-control text-box single-line password valid", id = "PinDebitTrans", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.AmountofSurcharge, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.AmountofSurcharge, new { @class = "form-control text-box single-line password valid", id = "AmountofSurcharge", Value = "", placeholder = "$    or    %" })
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.EBTVolumeDiscount, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.EBTVolumeDiscount, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "EBTVolumeDiscount", Value = "", placeholder = "%" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.EBTTransFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.EBTTransFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "EBTTransFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyComplianceFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyComplianceFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyComplianceFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyStatementFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyStatementFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyStatementFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyMinimum, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyMinimum, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyMinimum", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.ChargeBack, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.ChargeBack, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "ChargeBack", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        @*Pinless options fields*@
+        <div class="resultDetail Pinless required">
+            <div class="form-field">
+                <nav class="navbar navbar-light bg-light">
+                    <span class="navbar-title">Schedule of Fees for Pinless Debit</span>
+                </nav>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.VolumeDiscount, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.VolumeDiscount, new { @class = "form-control text-box single-line password valid", id = "VolumeDiscount", Value = "", placeholder = "%" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.AuthFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.AuthFee, new { @class = "form-control text-box single-line password valid", id = "AuthFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyStatementFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyStatementFee, new { @class = "form-control text-box single-line password valid", id = "MonthlyStatementFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyComplianceFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyComplianceFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyComplianceFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.TransFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.TransFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "TransFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.PushCredit, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.PushCredit, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "PushCredit", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.ChargebackFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.ChargebackFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "ChargebackFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyMinimum, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyMinimum, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyMinimum", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.GatewaySetupFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.GatewaySetupFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "GatewaySetupFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.MonthlyGatewayFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.MonthlyGatewayFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "MonthlyGatewayFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+
+                    <div class="col-sm-2">
+                        <div class="label-wrapper">@Html.LabelFor(Model => Model.ApplicationFee, new { @class = "control-label" })</div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="input-group">
+                            @Html.TextBoxFor(Model => Model.ApplicationFee, new { @class = "form-control text-box single-line password valid", Type = "Text", id = "ApplicationFee", Value = "", placeholder = "$" })
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div>
+
+            @*@Html.ActionLink("Next", "Test2", "Home", new { }, null)*@
+
+            @*<button type="submit" id="search-users" class="btn btn-primary btn-search"> Submit </button>*@
+
+
+            @*<input type="submit" value="Next" onclick="window.location.href='@Html.ActionLink("Test2","Home")';" />*@
+
+            @*<input type="submit" value="Next"  onclick='@Html.ActionLink("Next", "Test2", "Home", new { }, null)'/>*@
+
+            @*@using(Html.BeginForm("Test2", "Home")) {
+                <input type="submit" value="next" onclick='@Html.ActionLink("Next", "Test2", "Home")'/>
+                }*@
+
+            @*<a href='@Url.Action("Test2", "Home")'>
+                    <input type='submit' value='Next' id="search-users" class="btn btn-primary btn-search" />
+                </a>*@
+
+            @*<button type="submit" class="btn btn-primary">Next</button>*@
+            @*@Html.ActionLink("Next", "Test2", "Home", new { }, null)*@
+        </div>
+    </div>
+
+    <ul class="pager">
+        @*<button type="submit" class="btn btn-primary">Next</button>*@
+        <li>@Html.ActionLink("<", "#", "Home") </li>
+        <li>@Html.ActionLink(">", "Setup","Home") </li>
+    
+    </ul>
+</form>

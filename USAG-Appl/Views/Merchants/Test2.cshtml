@@ -1,0 +1,111 @@
+﻿@model USAG_Appl.Models.Merchant
+<h1> Page 2</h1>
+@*<form action="submitTest2" method="post" class="form-horizontal" role="form">*@
+@using (Html.BeginForm("submitTest2", "Merchants"))
+{
+    @Html.AntiForgeryToken();
+    @Html.HiddenFor(Model => Model.ID)
+    <div class="form-group">
+
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.legalName, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.legalName, new { @class = "form-control text-box single-line password valid", id = "Merchant_ContactNameThisAddress", Value = "", placeholder = "Merchant Legal Name(Must Match Social Security or federal tax ID records)" })
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.dbaName, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.dbaName, new { @class = "form-control text-box single-line password valid", id = "Location_Name", placeholder = "Location Name" })
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.legalAddress, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.legalAddress, new { @class = "form-control text-box single-line password valid", id = "Merchant_LegalAddress", placeholder = "Merchant Legal Address" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.LocstreetAddress, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.LocstreetAddress, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "Location Street Address(NO PO Box" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.corporatePhone, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+                @Html.TextBoxFor(Model => Model.corporatePhone, new { @class = "form-control text-box single-line password valid", id = "Merchant_LegalAddress", placeholder = "Corporate Phone" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.dbaPhone, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.dbaPhone, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "DBA Phone" })
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.merchantEmail, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.merchantEmail, new { @class = "form-control text-box single-line password valid", id = "Merchant_Phone", placeholder = "Email", Type = "email" })
+            </div>
+        </div>
+        <div class="col-sm-2">
+
+            <div class="label-wrapper">@Html.LabelFor(Model => Model.merchantwebsite, new { @class = "control-label" })</div>
+        </div>
+        <div class="col-sm-4">
+            <div class="input-group">
+
+                @Html.TextBoxFor(Model => Model.merchantwebsite, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "MERCHANT Website", Type = "Website" })
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+
+        @Html.ActionLink("Previous", "Test1", "Home", new { }, null)
+
+
+        <button type="submit" id="search-users" href="~/Views/Home/Test2.cshtml"> Submit </button>
+
+
+
+    </div>
+}

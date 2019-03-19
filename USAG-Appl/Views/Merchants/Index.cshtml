@@ -1,0 +1,209 @@
+﻿@model IEnumerable<USAG_Appl.Models.Merchant>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email_ApplcationType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GrossYearlyDebitSalesVolume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AverageTicket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HighestTicketAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinDebitVolumeDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinDebitTrans)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountofSurcharge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EBTVolumeDiscount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EBTTransFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyComplianceFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyStatementFee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MonthlyMinimum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChargeBack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dbaName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.legalName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.legalAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocstreetAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.corporatePhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.merchantEmail)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.merchantname_taxreturn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.federalTaxID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.merchantwebsite)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.corporateFax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dbaPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dbaFax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.warrantyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.warrantyAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.streetAddress2)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email_ApplcationType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GrossYearlyDebitSalesVolume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AverageTicket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighestTicketAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinDebitVolumeDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinDebitTrans)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountofSurcharge)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EBTVolumeDiscount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EBTTransFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyComplianceFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyStatementFee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MonthlyMinimum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChargeBack)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dbaName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.legalAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocstreetAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.corporatePhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.merchantEmail)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.merchantname_taxreturn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.federalTaxID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.merchantwebsite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.corporateFax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dbaPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.dbaFax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.warrantyName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.warrantyAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.streetAddress2)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

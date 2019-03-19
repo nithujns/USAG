@@ -1,0 +1,83 @@
+﻿@model USAG_Appl.Models.Merchant
+<h1> Page 1</h1>
+<form action="Test1" method="post" class="form-horizontal" role="form" id="Test1_Form">
+
+
+<div class="form-group">
+
+    <div class="col-sm-2">
+
+        <div class="label-wrapper">@Html.LabelFor(Model => Model.Email_ApplcationType, new { @class = "control-label" })</div>
+    </div>
+    <div class="col-sm-4">
+        <div class="input-group">
+
+            @Html.TextBoxFor(Model => Model.Email_ApplcationType, new { @class = "form-control text-box single-line password valid", Type = "Email", id = "Email_ApplcationType", Value = "", placeholder = "Email Address" })
+        </div><br />
+        <div class="input-group">
+
+            @Model
+
+            @Html.RadioButtonFor(Model => Model.Pin, "Pin", new { id = "Pin", Name = "choose-one", Value = "Pin" })Pin Based&nbsp;&nbsp;&nbsp;&nbsp;
+            @Html.RadioButtonFor(Model => Model.Pin, "Pinless", new { id = "Pin", Name = "choose-one", Value = "Pinless" })Pinless
+
+
+
+            <div class="resultDetail Pin required">
+
+
+                <p class="form-field">
+                    <label for="result-detail-sold">
+
+
+                    </label>
+                    <br>
+                    <select name="Pin" id="Pin" class="resultDetail Pin required">
+                        <option value="-- Select One --" label=" -- Select One -- " selected="selected">-- Select One --</option>
+                        <option value="All Present" label="All Present">All Present</option>
+                        <option value="One Leg" label="One Leg">One Leg</option>
+                    </select>
+                </p>
+            </div>
+
+            <div class="resultDetail Pinless required">
+                <p class="form-field">
+                    <label for="result-detail-sold">
+
+
+                    </label>
+                    <br>
+                    <select name="Pinless" id="Pinless" class="resultDetail Pinless required">
+                        <option value="-- Select two --" label=" -- SelectTwo-- " selected="selected">-- Select Two --</option>
+                        <option value="Two" label="Two">Two</option>
+                        <option value="One Leg" label="Three">Three</option>
+                    </select>
+                </p>
+            </div>
+            <div>
+
+                @*@Html.ActionLink("Next", "Test2", "Home", new { }, null)*@
+
+                @*<button type="submit" id="search-users" class="btn btn-primary btn-search"> Submit </button>*@
+
+
+                @*<input type="submit" value="Next" onclick="window.location.href='@Html.ActionLink("Test2","Home")';" />*@
+
+                @*<input type="submit" value="Next"  onclick='@Html.ActionLink("Next", "Test2", "Home", new { }, null)'/>*@
+
+                @*@using(Html.BeginForm("Test2", "Home")) {
+        <input type="submit" value="next" onclick='@Html.ActionLink("Next", "Test2", "Home")'/>
+        }*@
+
+                @*<a href='@Url.Action("Test2", "Home")'>
+            <input type='submit' value='Next' id="search-users" class="btn btn-primary btn-search" />
+        </a>*@
+
+                <button type="submit" id="search-users"  >Next     </button>
+                @*@Html.ActionLink("Next", "Test2", "Home", new { }, null)*@
+            </div>
+        </div>
+    </div>
+</div>
+
+</form>

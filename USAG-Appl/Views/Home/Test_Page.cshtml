@@ -1,0 +1,277 @@
+﻿@*This page has the layout of the form values
+    The Next & Previous buttons work*@
+
+
+@model USAG_Appl.Models.Merchant
+
+@*Test Nithya*@
+
+    
+@*<div id="main">
+    <div class="container-fluid">
+        <div class="topnav">
+
+            <span style="font-size:30px;cursor:pointer; color:white" onclick="manageToggleMenu()" id="toggleMenu" title="Open">&#9776; </span>
+            <a href="#">Nithya Jones Caesar</a>
+            <a href="#">Logout</a>
+            <a href="#"><i class="fa fa-cogs" style="color:white;"></i></a>
+        </div>
+
+        <div class="w3-container" id="Body_Container">
+            <div class="panel panel-default panel-search" style="margin-top:-16px !important; border:0 !important; border-radius:0!important;">
+                <div class="panel-body">
+                    <div class="content">
+
+                        <div class="form-horizontal">
+                            <div id="user-edit" class="nav-tabs-custom">*@
+
+
+
+                                @*<ul class="nav nav-tabs">
+                                    <li class="active"><a data-tab-name="tab-info" data-toggle="tab" href="#Appl_Type">Application Type</a></li>
+                                    <li class=""><a data-tab-name="tab-info" data-toggle="tab" href="#tab-info">Merchant Profile</a></li>
+                                    <li class=""><a data-tab-name="tab-activitylog" data-toggle="tab" href="#OwnerOfficer">Owner/Officer Information</a></li>
+                                    <li class=""><a data-tab-name="tab-info" data-toggle="tab" href="#OwnerOfficer">Owner/Officer Information</a></li>
+
+                                </ul>*@
+                                @*<div id="rcorners2">
+
+                                    <form action="/Home/Test_Page" method="post" class="form-horizontal" role="form">
+
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">*@
+                                                    @*<div class="tab-content">*@
+
+                                                        @*First Tab*@
+
+                                                        @*<div class="tab-pane active" id="Appl_Type">*@
+                                                    <h1> Application Type</h1>
+                                                            <div class="form-group">
+
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.Email_ApplcationType, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.Email_ApplcationType, new { @class = "form-control text-box single-line password valid", Type = "Email", id = "Email_ApplcationType", Value = "", placeholder = "Email Address" })
+                                                                    </div><br />
+                                                                    <div class="input-group">
+
+                                                                        @Model
+
+                                                                        @Html.RadioButtonFor(Model => Model.Pin, "Pin", new { id = "Pin", Name = "choose-one", Value = "Pin" })Pin Based&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        @Html.RadioButtonFor(Model => Model.Pin, "Pinless", new { id = "Pin", Name = "choose-one", Value = "Pinless" })Pinless
+
+
+
+                                                                        <div class="resultDetail Pin required">
+
+
+                                                                            <p class="form-field">
+                                                                                <label for="result-detail-sold">
+
+
+                                                                                </label>
+                                                                                <br>
+                                                                                <select name="Pin" id="Pin" class="resultDetail Pin required">
+                                                                                    <option value="-- Select One --" label=" -- Select One -- " selected="selected">-- Select One --</option>
+                                                                                    <option value="All Present" label="All Present">All Present</option>
+                                                                                    <option value="One Leg" label="One Leg">One Leg</option>
+                                                                                </select>
+                                                                            </p>
+                                                                        </div>
+
+                                                                        <div class="resultDetail Pinless required">
+                                                                            <p class="form-field">
+                                                                                <label for="result-detail-sold">
+
+
+                                                                                </label>
+                                                                                <br>
+                                                                                <select name="Pinless" id="Pinless" class="resultDetail Pinless required">
+                                                                                    <option value="-- Select two --" label=" -- SelectTwo-- " selected="selected">-- Select Two --</option>
+                                                                                    <option value="Two" label="Two">Two</option>
+                                                                                    <option value="One Leg" label="Three">Three</option>
+                                                                                </select>
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            @*<a class="btn btn-primary continue disabled">Previous</a>*@
+                                                            @*<a class="btn btn-primary continue">Next</a>*@
+
+
+                                                            @*<a class="btn btn-primary continue"> Next @Html.ActionLink("Next","test_tab", "Home")</a>*@
+
+                                                            <div>
+                                                             @Html.ActionLink("Next", "Test_Tab","Home", new {}, null)
+       
+                                                            </div>
+                                                        @*</div>
+
+
+                                                    </div>*@
+
+                                                        @*Second Tab*@
+
+                                                        @*<div id="tab-info" class="tab-pane fade">
+                                                            <div class="form-group">
+
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.legalName, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.legalName, new { @class = "form-control text-box single-line password valid", id = "Merchant_ContactNameThisAddress", Value = "", placeholder = "Merchant Legal Name(Must Match Social Security or federal tax ID records)" })
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.dbaName, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.dbaName, new { @class = "form-control text-box single-line password valid", id = "Location_Name", placeholder = "Location Name" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.legalAddress, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.legalAddress, new { @class = "form-control text-box single-line password valid", id = "Merchant_LegalAddress", placeholder = "Merchant Legal Address" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.LocstreetAddress, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.LocstreetAddress, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "Location Street Address(NO PO Box" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.corporatePhone, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+                                                                        @Html.TextBoxFor(Model => Model.corporatePhone, new { @class = "form-control text-box single-line password valid", id = "Merchant_LegalAddress", placeholder = "Corporate Phone" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.dbaPhone, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.dbaPhone, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "DBA Phone" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="form-group">
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.merchantEmail, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.merchantEmail, new { @class = "form-control text-box single-line password valid", id = "Merchant_Phone", placeholder = "Email", Type = "email" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.merchantwebsite, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.merchantwebsite, new { @class = "form-control text-box single-line password valid", id = "Merchant_LocStreetAddress", placeholder = "MERCHANT Website", Type = "Website" })
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <a class="btn btn-primary back">Previous</a>
+                                                            <a class="btn btn-primary continue">Next</a>
+
+
+                                                        </div>*@
+
+                                                        @*Third Tab*@
+
+                                                        @*<div id="OwnerOfficer" class="tab-pane fade">
+
+
+                                                            <div class="form-group">
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.merchantname_taxreturn, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.merchantname_taxreturn, new { @class = "form-control text-box single-line password valid", id = "Merchant_Name_taxReturn", placeholder = "Merchant Name", Type = "Text" })
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-sm-2">
+
+                                                                    <div class="label-wrapper">@Html.LabelFor(Model => Model.federalTaxID, new { @class = "control-label" })</div>
+                                                                </div>
+                                                                <div class="col-sm-4">
+                                                                    <div class="input-group">
+
+                                                                        @Html.TextBoxFor(Model => Model.federalTaxID, new { @class = "form-control text-box single-line password valid", id = "Federal_TaxID", placeholder = "Federal Tax ID", Type = "Text" })
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <a class="btn btn-primary back">Previous</a>
+                                                            <a class="btn btn-primary continue disabled">Next</a>
+                                                            <button type="submit" id="search-users" class="btn btn-primary btn-search">
+                                                               
+                                                                Submit
+                                                            </button>
+
+                                                        </div>*@
+
+                                                  @*</div>*@
+                                                @*</div>*@
+
+                                            @*</div>*@
+                                     
+
+
+                                    @*</form>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@

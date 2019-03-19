@@ -1,0 +1,208 @@
+﻿
+<div id="main">
+
+    <div class="topnav">
+
+        <span style="font-size:30px;cursor:pointer; color:white" onclick="manageToggleMenu()" id="toggleMenu" title="Open">&#9776; </span>
+        <a href="#">Nithya Jones Caesar</a>
+        <a href="#">Logout</a>
+        <a href="#"><i class="fa fa-cogs" style="color:white;"></i></a>
+    </div>
+
+    <div class="w3-container" id="Body_Container">
+        <div class="panel style=" margin-top:-16px !important;" panel-default panel-search">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchCompany" title="">Company</label></div>
+                            </div>
+
+
+
+                            <div class="col-md-8">
+                                <select class="form-control" data-val="true" data-val-number="The field SearchCompanyId must be a number." id="ddlCompany" name="SearchCompanyId">
+                                    <option selected="selected" value="0">-Select-</option>
+                                    <option value="47">Goldencomm</option>
+                                    <option value="50">Test Company-K</option>
+                                    <option value="49">Test GC</option>
+                                    <option value="48">USAG Test</option>
+                                </select>
+                                <script>
+                                    $('#ddlCompany').on('change', function () {
+                                        if ($(this).val() === "47") {
+                                            $("#otherType").show()
+                                        }
+                                        else {
+                                            $("#otherType").hide()
+                                        }
+                                    });</script>
+
+
+
+                                <span class="field-validation-valid" data-valmsg-for="SearchCompanyId" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchUserRoleIds" title="">Select Roles</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" data-val="true" data-val-number="The field SearchCompanyId must be a number." id="ddlCompany" name="SearchCompanyId">
+                                    <option selected="selected" value="0"> </option>
+                                    <option value="1">Administrators</option>
+                                    <option value="13">ISO</option>
+                                    <option value="9">Merchant Base Admin</option>
+                                    <option value="8">Merchant Full Admin</option>
+                                    <option value="11">Sub Merchant Base Admin</option>
+                                    <option value="10">Sub Merchant Full Admin</option>
+                                    <option value="7">USAG Base Admin</option>
+                                    <option value="6">USAG Full Admin</option>
+                                </select>
+                                <span class="field-validation-valid" data-valmsg-for="SelectRolesId" data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+
+
+                        @*<div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchUserRoleIds" title="">Select Roles</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="k-widget k-multiselect k-header" unselectable="on" style="">
+                                    <div class="k-multiselect-wrap k-floatwrap" unselectable="on">
+                                        <ul role="listbox" unselectable="on" class="k-reset" id="SearchUserRoleIds_taglist"></ul><input class="k-input k-readonly" style="width: 25px" accesskey="" role="listbox" aria-expanded="false" tabindex="0" aria-owns="SearchUserRoleIds_taglist SearchUserRoleIds_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false">
+                                        <span class="k-icon k-loading k-loading-hidden"></span>
+                                    </div>
+                                    <select id="SearchUserRoleIds" multiple="multiple" name="SearchUserRoleIds" data-role="multiselect" aria-disabled="false" aria-readonly="false" style="display: none;">
+                                        <option value="1">Administrators</option>
+                                        <option value="13">ISO</option>
+                                        <option value="9">Merchant Base Admin</option>
+                                        <option value="8">Merchant Full Admin</option>
+                                        <option value="11">Sub Merchant Base Admin</option>
+                                        <option value="10">Sub Merchant Full Admin</option>
+                                        <option value="7">USAG Base Admin</option>
+                                        <option value="6">USAG Full Admin</option>
+                                    </select>
+                                    <span style="font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-stretch: 100%; font-style: normal; font-weight: 400; letter-spacing: normal; text-transform: none; line-height: 18.34px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span></div>
+                                    <script>
+                            $(document).ready(function () {
+                                $("#SearchUserRoleIds").kendoMultiSelect({
+                                    select: function (e) {
+                                        var current = this.value();
+                                        if (this.dataSource.view()[e.item.index()].value === "0") {
+                                            this.value("");
+                                        }
+                                        else if (current.indexOf("0") !== -1) {
+                                            current = $.grep(current, function (value) {
+                                                return value !== "0";
+                                            });
+                                            this.value(current);
+                                        }
+                                    },
+                                    change: function (e) {
+                                        if (this.value().length === 0)
+                                            this.value(["0"]);
+                                    }
+                                }).data("kendoMultiSelect");
+                            });
+                        </script>
+                        <script>
+                            $(document).ready(function () {
+                                var rolesIdsInput = $('#SearchUserRoleIds').data("kendoMultiSelect");
+                                rolesIdsInput.setOptions({
+                                    autoClose: false
+                                });
+                            });
+                        </script>
+                                </div>
+                            </div>*@
+
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchFirstName" title="">First name</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" id="SearchFirstName" name="SearchFirstName" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="IsActive" title="">Active</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <select class="form-control" data-val="true" data-val-number="The field Active must be a number." id="Active" name="Active">
+                                    <option selected="selected" value="0">All</option>
+                                    <option value="1">Yes</option>
+                                    <option value="2">No</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+                        @*<div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchMerchantIds" title="">Select Merchant</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="k-widget k-multiselect k-header" unselectable="on" style="width: 100%;"><div class="k-multiselect-wrap k-floatwrap" unselectable="on"><ul role="listbox" unselectable="on" class="k-reset" id="merchants_taglist"></ul><input class="k-input k-readonly" style="width: 25px" accesskey="" role="listbox" aria-expanded="false" tabindex="0" aria-owns="merchants_taglist merchants_listbox" aria-disabled="false" aria-readonly="false" aria-busy="false"><span class="k-icon k-loading k-loading-hidden"></span></div><select id="merchants" style="width: 100%; display: none;" data-role="multiselect" multiple="multiple" aria-disabled="false" aria-readonly="false"></select><span style="font-family: &quot;Source Sans Pro&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px; font-stretch: 100%; font-style: normal; font-weight: 400; letter-spacing: normal; text-transform: none; line-height: 18.34px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span></div>
+                                <input id="merchantIds" name="merchantIds" type="hidden" value="">
+                            </div>
+                        </div>*@
+
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchMerchantIds" title="">Select Merchant</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" id="merchantIds" name="merchantIds" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchEmail" title="">Email</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" id="SearchEmail" name="SearchEmail" type="text" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <div class="label-wrapper"><label class="control-label" for="SearchLastName" title="">Last name</label></div>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="form-control text-box single-line" id="SearchLastName" name="SearchLastName" type="text" value="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 col-md-offset-5">
+                        <button type="button" id="search-users" class="btn btn-primary btn-search">
+                            <i class="fa fa-search"></i>
+                            Search
+                        </button>
+
+                        @*Hidden Data*@
+                        <div id="otherType" style="display:none;">
+                            <br /><br />
+                            <label for="specify">Specify Company Details</label> <input type="text" name="specify" placeholder="Specify Company Details 1" /><br />
+                            <label for="specify">Specify Company Details</label> <input type="text" name="specify" placeholder="Specify Company Details 2" /><br />
+                            <label for="specify">Specify Company Details</label> <input type="text" name="specify" placeholder="Specify Company Details 3" /><br />
+                            <label for="specify">Specify Company Details</label> <input type="text" name="specify" placeholder="Specify Company Details 4" /><br />
+                            <label for="specify">Specify Company Details</label> <input type="text" name="specify" placeholder="Specify Company Details 5" /><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul class="pager">
+            <li><a href="#">Previous</a></li>
+            <li><a href="#">Next</a></li>
+        </ul>
+    </div>
+</div>

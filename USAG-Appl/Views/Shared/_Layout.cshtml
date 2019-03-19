@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    @*<script src="jquery-3.3.1.min.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/Content/bootstrap.css")
+    @Scripts.Render("~/Content/Site.css")
+
+    @Html.Partial("_HeadderandSideNav")
+
+
+</head>
+<body>
+    <div id="main">
+        <div class="container-fluid">
+
+            <p id="Title"> </p>
+
+
+            <div class="topnav">
+
+                <span style="font-size:30px;cursor:pointer; color:white" onclick="manageToggleMenu()" id="toggleMenu" title="Open">&#9776; </span>
+                <a href="#">Nithya Jones Caesar</a>
+                <a href="#">Logout</a>
+                <a href="#"><i class="fa fa-cogs" style="color:white;"></i></a>
+            </div>
+
+            <div class="w3-container" id="Body_Container">
+                <div class="panel panel-default panel-search" style="margin-top:50px !important; border:0 !important; border-radius:0!important;">
+                    <div class="panel-body">
+                        <div class="content">
+
+                            <div class="form-horizontal">
+                                <div id="user-edit" class="nav-tabs-custom">
+
+
+
+                                    @*<ul class="nav nav-tabs">
+                                    <li class="active"><a data-tab-name="tab-info" data-toggle="tab" href="#Appl_Type">Application Type</a></li>
+                                    <li class=""><a data-tab-name="tab-info" data-toggle="tab" href="#tab-info">Merchant Profile</a></li>
+                                    <li class=""><a data-tab-name="tab-activitylog" data-toggle="tab" href="#OwnerOfficer">Owner/Officer Information</a></li>
+                                    <li class=""><a data-tab-name="tab-info" data-toggle="tab" href="#OwnerOfficer">Owner/Officer Information</a></li>
+
+                                </ul>*@
+                                    <div id="rcorners2">
+
+
+                                        <div class="panel-group">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    @*<div class="tab-content">*@
+
+
+                                                    @RenderBody()
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div class="Footer">
+        @*<ul class="pager">
+            <li>@Html.ActionLink("<", "", "Home") </li>
+            <li>@Html.ActionLink(">", "", "Home") </li>
+        </ul>*@
+
+    </div>
+
+    @Scripts.Render("~/Scripts/TestJS_File.js")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
